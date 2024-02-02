@@ -4,24 +4,31 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
-    public float speed = 4;
-    public float verticalInput;
-    public float horizontalInput;
+    public const float speed = 10;
+    public const float jump = 7;
+
+
+    public float horizontalInput; 
+    public Rigidbody2D rb;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
     }
+
 
     // Update is called once per frame
     void Update()
     {
-        // get the user's input
-        verticalInput = Input.GetAxis("Vertical");
+        // Deal with left/right arrows
         horizontalInput = Input.GetAxis("Horizontal");
-
-        // transform.Translate(Vector3.forward * Time.deltaTime * speed * verticalInput);
         transform.Translate(Vector3.right * Time.deltaTime * speed * horizontalInput);
+
+        // Deal with jump
+        if (Input.GetButtonDown("Jump"))
+        {
+            rb.AddForce(new Vector2(rb.velocity.x, jump), ForceMode2D.Impulse);
+        }
     }
 }
