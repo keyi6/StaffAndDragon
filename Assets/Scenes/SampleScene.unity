@@ -560,6 +560,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerActive: 0
+  collectedItems: {fileID: 1811427665}
 --- !u!1 &169438613
 GameObject:
   m_ObjectHideFlags: 0
@@ -867,6 +868,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerActive: 0
+  collectedItems: {fileID: 1811427665}
 --- !u!1 &355593207
 GameObject:
   m_ObjectHideFlags: 0
@@ -1134,6 +1136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerActive: 0
+  collectedItems: {fileID: 1811427665}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1652,6 +1655,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerActive: 0
+  collectedItems: {fileID: 1811427665}
 --- !u!1 &878807476
 GameObject:
   m_ObjectHideFlags: 0
@@ -2784,6 +2788,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerActive: 0
+  collectedItems: {fileID: 1811427665}
 --- !u!1 &2038455218
 GameObject:
   m_ObjectHideFlags: 0
