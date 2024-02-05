@@ -6,8 +6,6 @@ public class Camera : MonoBehaviour
 {
     public GameObject player;
 
-    private Vector3 offset = new Vector3(6, 1, -1);
-
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +14,7 @@ public class Camera : MonoBehaviour
 
     void LateUpdate()
     {
-        transform.position = player.transform.position + offset;
+        // Only follow x and z, make y a constant for better view
+        transform.position = new Vector3(player.transform.position.x + 6, 8, player.transform.position.z - 1);
     }
 }
