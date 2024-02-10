@@ -1,11 +1,14 @@
+using TMPro;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using TMPro;
+using Game;
+
 
 public class InteractiveObjects : MonoBehaviour
 {
     [SerializeField] private bool triggerActive = false;
+
     public TextMeshProUGUI collectedItems;
 
     public void OnTriggerEnter2D(Collider2D other)
@@ -29,7 +32,9 @@ public class InteractiveObjects : MonoBehaviour
     {
         if (triggerActive && Input.GetKeyDown(KeyCode.F))
         {
-            collectedItems.text += gameObject.tag + " ";
+            Element.AddElement(gameObject.tag);
+            collectedItems.text = "Collected Items:" + Element.GetDisplayString();
+
             Destroy(gameObject);
         }
     }
