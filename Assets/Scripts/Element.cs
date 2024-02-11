@@ -54,5 +54,11 @@ namespace Game
                 elements.RemoveAt(0);
             }
         }
+
+        public static int GetAttackValue()
+        {
+            // TODO
+            return 10;
+        }
     }
 }

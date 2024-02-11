@@ -33,7 +33,7 @@ public class InteractiveObjects : MonoBehaviour
         if (triggerActive && Input.GetKeyDown(KeyCode.F))
         {
             Element.AddElement(gameObject.tag);
-            collectedItems.text = "Collected Items:" + Element.GetDisplayString();
+            collectedItems.text = "Collected Items: " + Element.GetDisplayString();
 
             Destroy(gameObject);
         }
